@@ -69,7 +69,7 @@ def get_raw_query(request: Request) -> Response:
       c.customer_name AS customer_name
     FROM
       myapp_record AS r
-    LEFT OUTER JOIN
+    INNER JOIN
       myapp_customer AS C
     ON r.phone_number = c.phone_number
     WHERE
